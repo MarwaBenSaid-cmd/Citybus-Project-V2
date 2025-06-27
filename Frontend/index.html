@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/fav.ico">
+    
+    <title>CityBus SaarPfalz - Home</title>
+
+     <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- AOS Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="50">
+  <header>
+<!-- navbar starts -->
+<nav id="navbar-top" class="navbar navbar-expand-lg navbar-light bg-white sticky-top navbar-top">
+  <div class="container-fluid">
+    <!-- Logo -->
+    <a href="#" class="navbar-brand">
+      <img src="images/LOGO_citybus.png" class="logo">
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="cl bi bi-list"></i>
+  </button>
+
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <ul class="navbar-nav gap-4">
+        <li class="nav-item">
+          <a class="nav-link link" href="#home" data-translate="home">
+            <i class="cl bi bi-house-door"></i><span class="text">Startseite</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link" href="#service" data-translate="services">
+            <i class="cl bi bi-bus-front"></i><span class="text">Leistungen</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link" href="#booking" data-translate="booking">
+            <i class="cl bi bi-calendar-check"></i><span class="text">Bus mieten</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link" href="#locations" data-translate="locations">
+            <i class="cl bi bi-geo-alt"></i><span class="text">Standorte</span>
+          </a>
+        </li>
+       
+        <li class="nav-item">
+          <a class="nav-link link" href="#career" data-translate="career">
+            <i class="cl bi bi-briefcase"></i><span class="text">Karriere</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link" href="#clients" data-translate="clients">
+            <i class="cl bi  bi-people"></i><span class="text">Kunden</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link" href="#contact" data-translate="contact">
+            <i class="cl bi bi-envelope"></i><span class="text">Kontakt</span>
+          </a>
+        </li>
+    
+        
+      </ul>
+    </div>
+       <!-- Language Switcher (Right) -->
+       <div class="d-none d-lg-flex align-items-center gap-2 ms-auto">
+        <button id="btn-de" class="language-btn btn btn-sm btn-outline-secondary" onclick="changeLanguage('de')">
+          <img src="images/Flag_of_germany.png" alt="Deutsch" width="20"> DE
+        </button>
+        <button id="btn-en" class="language-btn btn btn-sm btn-outline-secondary" onclick="changeLanguage('en')">
+          <img src="images/English_language.png" alt="English" width="20"> EN
+        </button>
+      </div>
+      
+  </div>
+</nav>
+<!-- navbar ends here -->
+
+
+ <!-- Sidebar starts here -->
+ <div id="sidebar" class="sidebar">
+  <!-- Mobile Menu Button (Sidebar Toggle) -->
+  <button class="navbar-toggler nav-item" type="button" onclick="toggleSidebar()">
+    <i class="ct bi bi-list"></i>
+  </button>
+
+  <!-- Navigation Items -->
+  <ul class="nav flex-column mt-4">
+    
+    <li class="nav-item">
+      <a class="nav-link" href="#home" data-translate="home">
+        <i class="ct bi bi-house-door"></i><span class="text">Startseite</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#service" data-translate="services">
+        <i class="ct bi bi-bus-front"></i><span class="text">Leistungen</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#booking" data-translate="booking">
+        <i class="ct bi bi-calendar-check"></i><span class="text">Bus mieten</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#locations" data-translate="locations">
+        <i class="ct bi bi-geo-alt"></i><span class="text">Standorte</span>
+      </a>
+    </li>
+   
+    <li class="nav-item">
+      <a class="nav-link" href="#career" data-translate="career">
+        <i class="ct bi bi bi-person-check"></i><span class="text">Karriere</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#clients" data-translate="clients">
+        <i class="ct bi bi-people"></i><span class="text">Kunden</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#contact" data-translate="contact">
+        <i class="ct bi bi-envelope"></i><span class="text">Kontakt</span>
+      </a>
+    </li>
+    
+  </ul>
+  
+  <a class="nav-link" onclick="toggleLanguage()" id="language-switcher">
+    <div class="lang-circle">
+      <img src="images/English_language.png " id="flag-en">
+      <img src="images/Flag_of_germany.png" id="flag-de">
+    </div>
+  </a>
+  
+</div>
+<!-- Sidebar ends here -->
+</header>
+  
+<div class="main-content" id="main-content">
+<!-- Home section starts -->
+<section class="home py-5" id="home">
+  <div class="row justify-content-evenly align-middle">
+   
+    <!-- here data-aos is used for adding aos animation -->
+    <div class="col-12 col-md-5 text-center text-md-start pd-5 px-5 py-5" data-aos="slide-right">
+      <img src="images/LOGO_citybus-saarpfalz (1).png" alt="Logo" class="logo-small" />
+    
+        <br /><span class="c-orange" data-translate="title_home">CityBus SaarPfalz</span>
+        <h3 class="blinking-text" data-translate="subtitle_home">IMMER IN BEWEGUNG !</h3>
+
+      <p class="text-muted description-home" data-translate="description_home">
+        Wir bieten moderne Shuttle-, Reise- und Mietbusse für Flughafentransfers, Firmen-Events, Konzerte, Messen und Gruppenreisen. Unsere bestens gewartete Flotte und erfahrenen Fahrer garantieren eine sichere, pünktliche und angenehme Fahrt. Qualität, Komfort und faire Preise stehen bei uns an erster Stelle. Steigen Sie ein wir bringen Sie entspannt ans Ziel!
+      </p>
+    
+      <div class="mt-4">
+        <a href="#contact" class="c-btn h-btn py-3 px-5 rounded-pill" id="buttoncontact_home" data-translate="buttoncontact_home">
+          Kontaktieren Sie uns
+        </a>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 ">
+      <img src="images/IMG-1-removebg-preview.png" class="img-fluid img_bus" alt="" />
+    </div>
+  </div>
+</section>
+<!-- home section ends here -->
+
+  <!-- expertise section starts -->
+<section class="expertise py-5" id="service">
+  <div class="heading text-center">
+    <br />
+    <span class="c-orange" data-translate="expertise_title">Leistungen</span>
+    
+    <p class="text-muted expertise-description" data-translate="expertise_description">
+      Unsere Busse sind mit <strong>komfortablen Sitzen</strong>, <strong>WC</strong> und sogar <strong>VIP-Services</strong> ausgestattet. 
+      <br>
+      Wir bieten sowohl <strong>Standard- als auch Premium-Optionen</strong> an und passen unsere Dienstleistungen flexibel <strong>an Ihre individuellen Bedürfnisse</strong> an. 
+  
+    </p>
+  </div>
+
+  <div class="row justify-content-evenly mt-5">
+    
+    <!-- Service Card 1 -->
+    <div class="col-10 col-md-4" data-aos="fade-up">
+      <div class="service-card">
+        <div class="img">
+          <img src="images/Airport.jpg" class="img-fluid" alt="Flughafentransfer" />
+        </div>
+        <div class="content mt-3">
+          <h4 data-translate="airport_title">Flughafentransfer</h4>
+          <p class="text-muted small expertise-description" data-translate="airport_desc">
+            Pünktlicher, komfortabler Flughafentransfer mit modernen Shuttlebussen und erfahrenen Fahrern.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 2 -->
+    <div class="col-10 col-md-4" data-aos="fade-up">
+      <div class="service-card">
+        <div class="img">
+          <img src="images/corporate.jpg" class="img-fluid" alt="Firmenveranstaltungen" />
+        </div>
+        <div class="content mt-3">
+          <h4 data-translate="corporate_title">Firmenveranstaltungen</h4>
+          <p class="text-muted small expertise-description" data-translate="corporate_desc">
+            Stressfreier Transport für Ihre Mitarbeiter und Gäste zu Meetings und Events, mit modernen Bussen und professionellen Fahrern.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 3 -->
+    <div class="col-10 col-md-4" data-aos="fade-up">
+      <div class="service-card">
+        <div class="img">
+          <img src="images/group travel.jpg" class="img-fluid" alt="Gruppenreisen" />
+        </div>
+        <div class="content mt-3">
+          <h4 data-translate="group_title">Gruppenreisen</h4>
+          <p class="text-muted small expertise-description" data-translate="group_desc">
+            Maßgeschneiderte Transportlösungen für Gruppenreisen wie Klassenfahrten, Ausflüge und Betriebsausflüge.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 4 -->
+    <div class="col-10 col-md-4" data-aos="fade-up">
+      <div class="service-card">
+        <div class="img">
+          <img src="images/school bus.jpeg" class="img-fluid" alt="Schulbus-Service" />
+        </div>
+        <div class="content mt-3">
+          <h4 data-translate="schoolbus_title">Schulbus-Service</h4>
+          <p class="text-muted small expertise-description" data-translate="schoolbus_desc">
+            Sicherer und zuverlässiger Transport für Schüler mit modernen und komfortablen Bussen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 5 -->
+    <div class="col-10 col-md-4" data-aos="fade-up">
+      <div class="service-card">
+        <div class="img">
+          <img src="images/Hochzeit.jpg" class="img-fluid" alt="Hochzeitstransport" />
+        </div>
+        <div class="content mt-3">
+          <h4 data-translate="wedding_title">Eventstransport</h4>
+          <p class="text-muted small expertise-description" data-translate="wedding_desc">
+            Stilvoller Transport zu Ihrer Hochzeit und Feier mit luxuriösen Fahrzeugen und professionellen Fahrern.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Service Card 6 -->
+    <div class="col-10 col-md-4" data-aos="fade-up">
+      <div class="service-card">
+        <div class="img">
+          <img src="images/autobahn.jpg" class="img-fluid" alt="Ferntransport" />
+        </div>
+        <div class="content mt-3">
+          <h4 data-translate="transport_title">Ferntransport</h4>
+          <p class="text-muted small expertise-description" data-translate="transport_desc">
+            Zuverlässiger Transport von Gütern über große Entfernungen, sowohl national als auch international.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action Button -->
+    <div class="text-center mt-4">
+      <a href="#contact" class="c-btn h-btn py-3 px-5 rounded-pill" data-translate="button_request">
+        Jetzt Anfragen
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- expertise section ends here -->
+
+<!-- Booking section starts -->        
+<section class="booking" id="booking">
+
+  <div class="row justify-content-evenly align-items-stretch mt-3">
+    
+    <!-- Modal for Success/Failure Message -->
+    <div id="alertModal" class="modal client-card" style="display: none;">
+      <div class="modal-content client-card">
+        <span id="closeModal" class="close-btn">&times;</span>
+        <p id="modalMessage" style="text-align:center; font-size: 1rem;" data-translate="modal_message"></p>
+        <div class="text-center">
+          <button id="okButton" class="c-btn mt-2 py-2 px-4 rounded-pill" >OK</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Booking Form Section -->
+    <div class="col-12 col-md-5 d-flex flex-column mt-5 mt-md-0" data-aos="slide-right">
+      <div class="heading text-center mb-4">
+        <span class="c-orange" style="text-align:center; font-size: 2rem;" data-translate="travel_planned">Haben Sie eine Reise geplant?</span>
+        <h3 class="blinking-text text-center" data-lang="subtitle" data-translate="book_now">Buchen Sie jetzt</h3>
+      </div>
+
+      <div class="contact-form flex-grow-1 d-flex flex-column justify-content-between">
+        <form id="bookingForm" class="flex-grow-1 d-flex flex-column justify-content-between">
+          
+          <!-- Full Name of Sender -->
+          <div class="form-group mb-3">
+            <label for="sender-name" class="form-label" data-translate="fullname_label">Vollständiger Name</label>
+            <input type="text" class="form-control" id="sender-name" name="sender-name" placeholder="Ihr Name" required />
+          </div>
+          <div class="row mb-3">
+            <!-- Phone Number -->
+            <div class="form-group col-12 col-md-6 pe-md-1 mb-2 mb-md-0">
+              <label for="phone-number" class="form-label" data-translate="phone_number">Telefonnummer</label>
+              <input type="tel" class="form-control" id="phone-number" name="phone-number" placeholder="z.B. +49 123 456789" required />
+            </div>
+          
+            <!-- Email -->
+            <div class="form-group col-12 col-md-6 ps-md-1">
+              <label for="email-book" class="form-label" data-translate="email">Email</label>
+              <input type="email" class="form-control" id="email-book" name="email-book" placeholder="z.B. citybus@gmail.com" required />
+            </div>
+          </div>
+          
+          <!-- Departure Location -->
+          <div class="form-group mb-3">
+            <label for="departure-location" class="form-label" data-translate="departure_location">Abfahrtsort</label>
+            <input type="text" class="form-control" id="departure-location" name="departure-location" placeholder="z.B. Merkurstraße 21, 66877 Ramstein-Miesenbach" required />
+          </div>
+
+          <div class="row mb-3">
+            <!-- Departure Date -->
+            <div class="form-group col-12 col-md-6 pe-md-1 mb-2 mb-md-0">
+              <label for="departure-date" class="form-label" data-translate="departure_date">Datum Hinfahrt</label>
+              <input type="date" class="form-control" id="departure-date" name="departure-date" required />
+            </div>
+
+            <!-- Departure Time -->
+            <div class="form-group col-12 col-md-6 ps-md-1">
+              <label for="departure-time" class="form-label" data-translate="departure_time">Uhrzeit Hinfahrt</label>
+              <input type="time" class="form-control" id="departure-time" name="departure-time" required />
+            </div>
+          </div>
+
+          <!-- Arrival Location -->
+          <div class="form-group mb-3">
+            <label for="arrival-location" class="form-label" data-translate="arrival_location">Ankunftsort</label>
+            <input type="text" class="form-control" id="arrival-location" name="arrival-location" placeholder="z.B. Hans-Böckler-Straße 39 65468 Trebur" required />
+          </div>
+
+          <div class="row mb-3">
+  <!-- Return Date -->
+  <div class="form-group col-12 col-md-6 pe-md-1 mb-2 mb-md-0">
+    <label for="return-date" class="form-label" data-translate="return_date">Datum Rückfahrt</label>
+    <input type="date" class="form-control" id="return-date" name="return-date" required />
+  </div>
+
+  <!-- Return Time -->
+  <div class="form-group col-12 col-md-6 ps-md-1">
+    <label for="return-time" class="form-label" data-translate="return_time">Uhrzeit Rückfahrt</label>
+    <input type="time" class="form-control" id="return-time" name="return-time" required />
+  </div>
+</div>
+
+          <div class="row mb-3">
+            <!-- Person Count -->
+            <div class="form-group col-12 col-md-6 pe-md-1 mb-2 mb-md-0">
+              <label for="person-count" class="form-label" data-translate="person_count">Personenanzahl</label>
+              <input type="number" class="form-control" id="person-count" name="person-count" min="1" placeholder="z.B. 30" required />
+            </div>
+            <!-- Bus Type -->
+            <div class="form-group col-12 col-md-6 ps-md-1">
+              <label for="bus-type" class="form-label" data-translate="bus_type">Bus</label>
+              <select class="form-control" id="bus-type" name="bus-type" required>
+                <option value="" disabled selected data-translate="select-option">Bitte wählen</option>
+                <option value="minibus" data-translate="minibus_option">Minibus (8–16 Personen)</option>
+                <option value="standard" data-translate="standard_option">Standardbus</option>
+                <option value="premium" data-translate="premium_option">Premiumbus (mehr Komfort)</option>
+                <option value="vip" data-translate="vip_option">VIP-Bus (Luxusausstattung)</option>
+              </select>
+            </div>
+          </div>
+          
+
+          <!-- Submit Button -->
+          <div class="text-center">
+            <button type="submit" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill" data-translate="submit_booking">Buchung absenden</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+    <!-- Carousel Section (Left Side) -->
+    <div class="col-12 col-md-6 d-flex flex-column mt-5 mt-md-0" data-aos="slide-left">
+      <div id="photoCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner rounded-4 shadow">
+          <div class="carousel-item active">
+            <img src="images/paris.jpg" class="d-block w-100"  alt="Photo 0">
+          </div>
+          <div class="carousel-item">
+            <img src="images/lensa4.jpg" class="d-block w-100" alt="Photo 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/bus5.jpg" class="d-block w-100"  alt="Photo 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/vipbus.jpg" class="d-block w-100" alt="Photo 3">
+          </div>
+        
+          <div class="carousel-item">
+            <img src="images/bus4.jpg" class="d-block w-100"  alt="Photo 4">
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="images/lensa3.jpg" class="d-block w-100" alt="Photo 5">
+          </div>
+          <div class="carousel-item">
+            <img src="images/lensa5.jpg" class="d-block w-100"  alt="Photo 6">
+          </div>
+          <div class="carousel-item">
+            <img src="images/bus2.jpg" class="d-block w-100"  alt="Photo 7">
+          </div>
+          <div class="carousel-item">
+            <img src="images/lensa2.jpg" class="d-block w-100"  alt="Photo 8">
+          </div>
+          <div class="carousel-item">
+            <img src="images/minibus3.jpeg" class="d-block w-100 " alt="Photo 9">
+          </div>
+          <div class="carousel-item">
+            <img src="images/minibus2.jpg" class="d-block w-100 " alt="Photo 10">
+          </div>
+          <div class="carousel-item">
+            <img src="images/newphoto.jpg" class="d-block w-100 " alt="Photo 11">
+          </div>
+      
+        </div>
+         <!-- Arrows -->
+         <button class="carousel-control-prev" type="button" data-bs-target="#photoCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button> 
+        <button class="carousel-control-next" type="button" data-bs-target="#photoCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+<!-- Booking section ends -->
+
+
+
+
+ <!-- Locations Section Starts Here -->
+ <section class="locations  py-5" id="locations">
+  <div class="heading text-center">
+    <br /><span class="c-orange" data-translate="title_location">Standorte</span>
+    <p class="text-muted career-description" data-translate="description_location">
+      Entdecken Sie unsere Standorte in der Region Saarpfalz.
+    </p>
+    </div>
+    <div class="row justify-content-center mt-5 d-flex justify-content-center">
+    <!-- Location Card -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <div class=" location-card ">
+        <div class="location-image">
+          <img src="images/tebur.webp" class="img-fluid" alt="Trebur">
+        </div>
+        <span class="location-name">Trebur</span>
+      </div>
+    </div>
+    <!-- Location Card -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <div class="location-card">
+        <div class="location-image">
+          <img src="images/hassloch.webp" class="img-fluid" alt="Haßloch">
+        </div>
+        <span class="location-name">Haßloch</span>
+      </div>
+    </div>
+    <!-- Location Card -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <div class="location-card">
+        <div class="location-image">
+          <img src="images/ramstein.jpg" class="img-fluid" alt="Ramstein">
+        </div>
+        <span class="location-name">Ramstein</span>
+      </div>
+    </div>
+    <!-- Location Card -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <div class="location-card ">
+        <div class="location-image">
+          <img src="images/frankfurt.jpg" class="img-fluid" alt="Frankfurt">
+        </div>
+        <span class="location-name">Frankfurt</span>
+      </div>
+    </div>
+    <!-- Location Card -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <div class="location-card">
+        <div class="location-image">
+          <img src="images/muenchen.jpg" class="img-fluid" alt="München">
+        </div>
+        <span class="location-name">München</span>
+      </div>
+    </div>
+    <!-- Location Card -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <div class="location-card">
+        <div class="location-image">
+          <img src="images/gross-gerau.jpg" class="img-fluid" alt="Groß-Gerau">
+        </div>
+        <span class="location-name">Groß-Gerau</span>
+      </div>
+    </div>
+    <!-- Location Card -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <div class="location-card ">
+        <div class="location-image">
+          <img src="images/frankfurt-hahn.jpg" class="img-fluid" alt="Frankfurt-Hahn">
+        </div>
+        <span class="location-name">Frankfurt-Hahn</span>
+      </div>
+    </div>
+    <!-- Location Card -->
+    <div class="col-6 col-md-3 mb-4" data-aos="fade-up">
+      <div class="location-card">
+        <div class="location-image">
+          <img src="images/saarbruecken.jpg" class="img-fluid" alt="Saarbrücken">
+        </div>
+        <span class="location-name">Saarbrücken</span>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Locations Section ends Here -->
+
+
+<!-- Career section starts here -->
+<section class="career py-5" id="career">
+  <div class="row justify-content-evenly mt-5">
+
+    <!-- Job Description Section -->
+    <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+      <div class="heading text-center">
+        <h3 class="c-orange" data-translate="career_title">Wir stellen ein - jetzt bewerben!</h3>
+        <h4 class="blinking-text text-center" data-translate="career_subtitle">Einfach online bewerben!</h4>
+      </div>
+      <p class="text-muted career-description center" data-translate="career_description">
+        Bewerben Sie sich online und unkompliziert per Online-Formular.  
+        Für eine vollständige Bewerbung füllen Sie bitte Alle Felder aus und laden Sie einen vollständigen Lebenslauf sowie ein Bewerbungsfoto hoch.  
+      <br>  Wir können nur vollständige Bewerbungen bearbeiten.
+      </p>
+      <img src="images/driver.jpg" class="driver rounded-4 shadow align-items-center" alt="career">
+    </div>
+
+    <!-- Application Form Section -->
+    <div class="col-md-5 col-10 mt-5 mt-md-0" data-aos="slide-left">
+      <form id="applicationForm" class="contact-form">
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="name" name="name" data-translate="career_name" placeholder="Name" required/>
+        </div>
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="vorname" name="vorname" data-translate="career_vorname" placeholder="Vorname" required />
+        </div>
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="address" name="address" data-translate="career_address" placeholder="Straße + Hausnummer*"  required />
+        </div>
+
+        <div class="form-group mb-3">
+          <input type="text" class="form-control" id="postal" name="postal" data-translate="career_postal" placeholder="Postleitzahl + Ort*" required />
+        </div>
+
+        <div class="form-group mb-3">
+          <input type="tel" class="form-control" id="phone" name="phone" data-translate="career_phone" placeholder="Telefon*" required />
+        </div>
+
+        <div class="form-group mb-3">
+          <input type="email" class="form-control" id="email" name="email" data-translate="career_email" placeholder="E-Mail*" required />
+        </div>
+
+        <div class="form-group mb-3">
+          <select class="form-control" id="fuhrerschein" name="fuhrerschein" required>
+            <option value="" disabled selected data-translate="select_license">Führerscheinklasse wählen*</option>
+            <option value="B" data-translate="option_b">B – PKW</option>
+            <option value="BE" data-translate="option_be">BE – PKW mit Anhänger</option>
+            <option value="C" data-translate="option_c">C – LKW</option>
+            <option value="CE" data-translate="option_ce">CE – LKW mit Anhänger</option>
+            <option value="D" data-translate="option_d">D – Bus</option>
+            <option value="DE" data-translate="option_de">DE – Bus mit Anhänger</option>
+          </select>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="cv" class="form-label" data-translate="label_cv">Lebenslauf hochladen (PDF)*</label>
+          <input type="file" class="form-control" id="cv" name="cv" accept=".pdf" required />
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="photo" class="form-label" data-translate="label_photo">Bewerbungsfoto hochladen (JPG!)*</label>
+          <input type="file" class="form-control" id="photo" name="photo" accept=".jpg,.jpeg" required />
+        </div>
+
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="privacy" name="privacy" required>
+          <label class="form-check-label" for="privacy">
+            <span data-translate="privacy_text">Ich habe die </span><a href="#">Datenschutzerklärung</a><span data-translate="privacy_accept"> gelesen und akzeptiere diese.</span>
+          </label>
+        </div>
+
+        <div class="text-center">
+          <button class="c-btn h-btn py-3 px-5 rounded-pill" data-translate="button_submit">
+            Jetzt bewerben!
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>
+<!-- Career section ends here -->
+
+    
+<!-- Testimonial Section Starts -->
+<section class="clients pt-5 py-5 mt-md-0" id="clients">
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+        <!-- Client Testimonials Section -->
+        <div class="col-md-12 col-12 mt-5" data-aos="slide-left">
+          <div class="heading">
+            <h3 data-translate="clients_title">Zufriedene Kundenfeedbacks</h3>
+          </div>
+  
+          <!-- Clients Carousel -->
+          <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row justify-content-evenly">
+                  <div class="col-1 text-center">
+                    <i class="bi bi-quote" ></i>
+                  </div>
+                  <div class="col-10">
+                    <p class="text-muted" style="font-size: 1rem; font-style: italic;" data-translate="clients_text">
+                      Ob Flughäfen, Fluggesellschaften oder führende Unternehmen aus anderen Branchen – wir sind stolz darauf, mit unseren geschätzten Partnern Deutsche Bahn, SWK, 1. FC Kaiserslautern und Elis zusammenzuarbeiten. Mit unserem Engagement für Qualität und Innovation bieten wir maßgeschneiderte Lösungen, die den höchsten Standards gerecht werden...
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Repeat carousel-item blocks for other testimonials -->
+            </div>
+          </div>
+        </div>
+      <!-- Client Logos Section -->
+      <!-- Carousel for small devices -->
+<div class="d-md-none mt-5" data-aos="slide-right">
+  <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="client-card text-center">
+          <img src="images/db.jpg" alt="Deutsche Bahn" class="d-block mx-auto" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="client-card text-center">
+          <img src="images/swk.png" alt="SWK" class="d-block mx-auto" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="client-card text-center">
+          <img src="images/FCK.png" alt="1. FC Kaiserslautern" class="d-block mx-auto" />
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="client-card text-center">
+          <img src="images/elis.png" alt="Elis" class="d-block mx-auto" />
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+</div>
+
+<!-- Grid for medium and larger devices -->
+<div class="d-none d-md-block col-md-12 col-10 mt-5" data-aos="slide-right">
+  <div class="row g-4">
+    <div class="col-10 col-md-6 col-lg-3">
+      <div class="client-card">
+        <img src="images/db.jpg" alt="Deutsche Bahn" />
+      </div>
+    </div>
+    <div class="col-10 col-md-6 col-lg-3">
+      <div class="client-card">
+        <img src="images/swk.png" alt="SWK" />
+      </div>
+    </div>
+    <div class="col-10 col-md-6 col-lg-3">
+      <div class="client-card">
+        <img src="images/FCK.png" alt="1. FC Kaiserslautern" />
+      </div>
+    </div>
+    <div class="col-10 col-md-6 col-lg-3">
+      <div class="client-card">
+        <img src="images/elis.png" alt="Elis" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+      
+    </div>
+  </div>
+</section>
+<!-- Testimonial Section Ends -->
+    
+    <!-- contact section starts -->
+    <section class="contact  py-5" id="contact">
+      
+      <div class="row justify-content-evenly mt-5">
+     
+        <div class="col-md-5 col-10 mt-5 mt-md-0 " data-aos="slide-right">
+          <div class="heading text-center">
+            <h3 class="c-orange" data-translate="contact_title">Haben Sie Fragen? </h3>
+            <h3 class="blinking-text" data-translate="contact_subtitle"> Kontaktieren Sie uns gerne</h3 >
+            <br>
+            
+            
+          </div>
+          <form id="contactForm" class="contact-form">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="name-contact"
+                data-translate="contact_name"
+                placeholder="Name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="email-contact"
+                data-translate="contact_email"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="phone-contact"
+                data-translate="contact_phone"
+                placeholder="Telefonnummer."
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="message"
+                data-translate="message"
+                placeholder="Nachricht"
+                rows="5"
+              ></textarea>
+            </div>
+            <div class="text-center">
+            <button type="submit" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill" data-translate="contact_submit">
+              Einreichen
+            </button>
+            </div>
+
+          </form>
+        </div>
+        <div class="col-md-5 col-10 contact-details mt-5" data-aos="slide-left">
+          <!-- Address -->
+          <div class="row mt-4">
+            <div class="col-1">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="col-11">
+              <!-- Make the address clickable to open in Google Maps -->
+              <a href="https://www.google.com/maps?q=Merkurstraße+21,+66877+Ramstein-Miesenbach" target="_blank" rel="noopener noreferrer" style=" text-decoration: none;">
+                <p class="text">Merkurstraße 21, 66877 Ramstein-Miesenbach</p>
+              </a>
+            </div>
+          </div>
+          
+        
+          <!-- Phone -->
+          <div class="row align-items-center">
+            <div class="col-1">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>+49 (0)6371 954847-0</p>
+            
+            
+            </div>
+          </div>
+        
+          <!-- Email -->
+          <div class="row align-items-center">
+            <div class="col-1">
+              <i class="bi bi-send-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>info@citybus-saarpfalz.de</p>
+            </div>
+          </div>
+        
+          <!-- Website -->
+          <div class="row align-items-center">
+            <div class="col-1">
+              <i class="bi bi-globe-americas"></i>
+            </div>
+            <div class="col-11">
+              <p>https://www.citybus-saarpfalz.de/</p>
+            </div>
+          </div>
+        
+        <!-- QR Code Section -->
+<div class="row mt-4 align-items-center">
+  <div class="col-12 text-center">
+    <img src="images/citybus_qr.png" alt="Scan to rate us on Google Maps" class="qr-code">
+    <p class="qr-text mt-2" data-translate="qr_code">Scannen und bewerten Sie uns!</p>
+  </div>
+</div>
+
+        
+      </div>
+    </section>
+    <!-- contact section ends here -->
+
+      <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- footer section starts  -->
+    <footer class="text-center text-muted py-4">
+      <div class="link-group d-none d-md-block " data-aos="fade-up" >
+        <a href="#" data-translate="home">Startseite</a>
+        <div class="vr"></div>
+        <a href="#service" data-translate="services">Leistungen</a>
+        <div class="vr"></div>
+        <a href="#booking" data-translate="booking">Bus mieten</a>
+        <div class="vr"></div>
+        <a href="#locations" data-translate="locations">Standorte</a>
+        <div class="vr"></div>
+        <a href="#career" data-translate="career">Karriere</a>
+        <div class="vr"></div>
+         <a href="#clients" data-translate="clients">Kunden</a>
+        <div class="vr"></div>
+        <a href="#contact" data-translate="contact">Kontakt</a>
+       
+       <br> 
+    <br>
+      <a href="legal.html" target="_blank">Impressum / Datenschutz / AGB</a>
+
+
+
+      </div>
+
+
+    <div class="social-links mt-5" data-aos="fade-up">
+      <button class="rounded-pill linkedin" onclick="window.open('https://www.linkedin.com/company/citybus-saarpfalz', '_blank')">
+        <i class="bi bi-linkedin"></i>
+      </button>
+      <button class="rounded-pill instagram" onclick="window.open('https://www.instagram.com/thanusan_pararajasingam/', '_blank')">
+        <i class="bi bi-instagram"></i>
+      </button>
+      <button class="rounded-pill facebook" onclick="window.open('https://www.facebook.com/profile.php?id=61573941326340', '_blank')">
+        <i class="bi bi-facebook"></i>
+      </button>
+    </div>
+ 
+      
+   
+      
+      <p class="copyright" onclick="window.open('https://www.linkedin.com/in/marwa-b-said/', '_blank')">©2025 MBS For CityBus SaarPfalz | All Rights Reserved. </p>
+    </footer>
+    <!-- footer section ends here -->
+  </div>
+      <!-- bootstrap javascript cdn link  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS library javascript link  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // initializing AOS library
+      AOS.init({
+        duration: 1000,
+        offset: 50,
+      });
+    </script>
+    <!-- custom js file linking -->
+    <script src="js/script.js"></script>
+    <!-- jQuery (optional, Bootstrap 5 doesn't require jQuery) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<!-- Bootstrap Bundle JS (with Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

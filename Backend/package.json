@@ -1,0 +1,25 @@
+{
+  "name": "citybussaarpfalz",
+  "version": "1.0.0",
+  "description": "<div align=\"center\">",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd C:/Users/s.igel/Desktop/Citybus-Project/CitybusSaarpfalz - Backend && node server.js",
+    "client": "live-server CitybusSaarpfalz - Frontend"
+  },
+  "author": "MBS",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^4.21.2",
+    "form-data": "^4.0.2",
+    "mailgun-js": "^0.22.0",
+    "mailgun.js": "^12.0.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.0"
+  },
+  "keywords": []
+}
